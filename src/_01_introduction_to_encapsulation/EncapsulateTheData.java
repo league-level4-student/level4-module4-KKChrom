@@ -1,3 +1,4 @@
+
 package _01_introduction_to_encapsulation;
 
 /*
@@ -25,23 +26,49 @@ public class EncapsulateTheData {
 	
 	private int itemsReceived; //must not be negative. All negative arguments get set to 0.
 	private float degreesTurned; //must be locked between 0.0 and 360.0 inclusive.
-	private String nomenclature = " "; //must not be set to a blank string. Blank Strings get set to a space
+	private String nomenclature; //must not be set to a blank string. Blank Strings get set to a space
 	private Object memberObj; //can be any object type except String. Strings get turned into objects.
 	
 	public int getItems()
 	{
+		if(itemsReceived > 0 )
+		{
 		return itemsReceived;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 	public float getDegrees()
 	{
+		if(degreesTurned > 0 && degreesTurned <360)
+		{
 		return degreesTurned;
+		}
+		else
+		{
+			return 180;
+		}
 	}
 	public String getNoman()
 	{
+		if(nomenclature.equals(""))
+		{
+			nomenclature = " ";
+			return nomenclature;
+		}	
+		else
+		{
 		return nomenclature;
+		}
 	}
 	public Object getMember()
 	{
+		if(memberObj.getClass() == String.class)
+		{
+			return ((Object) memberObj);
+		}
 		return memberObj;
 	}
 	public static void main(String[] args) {
