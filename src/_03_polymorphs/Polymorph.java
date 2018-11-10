@@ -21,7 +21,7 @@ public abstract class Polymorph {
     }
     
     public void update(){
-   	 
+    	
     }
     
     public abstract void draw(Graphics g);
