@@ -24,6 +24,7 @@ public class PolymorphWindow extends JPanel implements ActionListener{
     Polymorph cirPoly;
    Polymorph folPoly;
    Polymorph iPoly;
+   Polymorph cPoly;
     ArrayList <Polymorph> p = new ArrayList <Polymorph>();
     public static void main(String[] args) {
    	 new PolymorphWindow().buildWindow();
@@ -43,6 +44,7 @@ public class PolymorphWindow extends JPanel implements ActionListener{
    	 cirPoly = new CircleMorph(50, 50);
    	 folPoly = new followPoly(50,50);
    	 iPoly = new imagePoly(50,50);
+   	 cPoly = new ClickPoly(50,50);
    	 timer = new Timer(1000 / 30, this);
    	 timer.start();
     p.add(bluePoly);
