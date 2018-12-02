@@ -14,7 +14,7 @@ public class MovingMorph extends Polymorph{
 		x+=10;
 		y+=10;
 		g.setColor(Color.black);
-		g.fillRect(x, y, 50, 50);
+		g.fillRect(x, y, 30, 70);
 		
 	}
 	

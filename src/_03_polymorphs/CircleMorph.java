@@ -15,7 +15,7 @@ public class CircleMorph extends Polymorph{
 		x = (int) (25 + Math.cos(angle)*radius);
 		y = (int) (25+ Math.sin(angle)*radius);
 		g.setColor(Color.green);
-		g.fillOval(x, y, 50, 50);
+		g.fillOval(x, y, 25, 75);
 	}
 	
 }

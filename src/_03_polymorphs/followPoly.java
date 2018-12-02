@@ -18,7 +18,7 @@ public class followPoly extends Polymorph{
 		Point z = MouseInfo.getPointerInfo().getLocation();
 		int x = z.x;
 		int y = z.y - 50;
-		g.fillRect(x, y, 50, 50);
+		g.fillRect(x, y, 20, 80);
 	}
 	
 }

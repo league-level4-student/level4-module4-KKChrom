@@ -18,30 +18,29 @@ public class ClickPoly extends Polymorph implements MouseListener{
 	public void draw(Graphics g) {
 
 		g.setColor(Color.yellow);
-		g.fillRect(width, length, 50, 50);
+		g.fillRect(width, length, 10, 90);
 		
 	}
 
+
 	@Override
 	public void mouseClicked(MouseEvent e) {
+		System.out.println("click");
 		// TODO Auto-generated method stub
-		if( 50 <= e.getX()|| e.getX() >= 0 || e.getY() >= 0 || e.getY()<= 50)
+		if( 10 <= e.getX()|| e.getX() >= 0 || e.getY() >= 0 || e.getY()<= 90)
 		{
-			JOptionPane.showMessageDialog(null, "Why'd you click on me?");
+			JOptionPane.showMessageDialog(null, "s");
 
 		}
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+	
 	}
 
 	@Override
