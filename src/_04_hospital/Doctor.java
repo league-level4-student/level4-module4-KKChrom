@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 
 public class Doctor {
+	boolean b = false;
 	ArrayList<Patient> p = new ArrayList<Patient>();
 	public Object performsSurgery() {
 		// TODO Auto-generated method stub
@@ -15,10 +16,18 @@ public class Doctor {
 		return false;
 	}
 
-	public void assignPatient(Patient patient) throws DoctorFullException{
+	public boolean assignPatient(Patient patient) throws DoctorFullException{
 		// TODO Auto-generated method stub
-		
-		p.add(patient);
+		DoctorFullException dfe = new DoctorFullException();
+		if(p.size()<=2)
+		{
+			p.add(patient);
+			return true;
+		}
+		else
+		{
+			throw dfe;
+		}
 	}
 
 	public ArrayList<Patient> getPatients() {
@@ -26,11 +35,11 @@ public class Doctor {
 		return p;
 	}
 
-	public void doMedicine() {
+	public  void doMedicine() {
 		// TODO Auto-generated method stub
-		for(int i =0; i < p.size(); i ++)
+		for(int i =0; i < p.size();i++)
 		{
-			p.get(i).feelsCaredFor();
+			p.get(i).checkPulse();
 		}
 }
 }

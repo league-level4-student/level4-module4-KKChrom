@@ -21,7 +21,7 @@ public class Hospital {
 
 	public List<Doctor> getDoctors() {
 		// TODO Auto-generated method stub
-		return null;
+		return dL;
 	}
 
 
@@ -32,8 +32,8 @@ public class Hospital {
 	}
 
 
-	public ArrayList<Doctor> getPatients() {
-		return null;
+	public ArrayList<Patient> getPatients() {
+		return pL;
 		// TODO Auto-generated method stub
 		
 	}
@@ -41,7 +41,29 @@ public class Hospital {
 
 	public void assignPatientsToDoctors() {
 		// TODO Auto-generated method stub
-		
+		ArrayList<Patient> plT = pL;
+		System.out.println("plt size = "+plT.size());
+	System.out.println("pL size = "+pL.size());
+		for(int i =0;i<dL.size();i++)
+		{
+			for(int j =0;j<plT.size();j++)
+			{
+				try {
+					boolean b = dL.get(i).assignPatient(plT.get(j));
+					if(b)
+					{
+					plT.remove(j);
+					j=-1;
+					System.out.println("removing "+(j+1)+" plt size = "+plT.size());
+					}
+				} catch (DoctorFullException e) {
+					System.out.println("break");
+					break;
+					
+				}
+				
+			}
+		}
 	}
 
 }
